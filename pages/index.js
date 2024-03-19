@@ -55,6 +55,7 @@ export default function Index({ posts, globalData }) {
         variant="small"
         className="absolute bottom-0 opacity-20 dark:opacity-10"
       />
+      {console.log(posts)  }
     </Layout>
   );
 }
@@ -62,7 +63,7 @@ export default function Index({ posts, globalData }) {
 export async function getServerSideProps() {
   const posts = await getPosts();
   const globalData = getGlobalData()
-
+    console.log(posts)  
 
   return { props: { posts, globalData } };
 }
